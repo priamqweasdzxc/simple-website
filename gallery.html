@@ -1,0 +1,66 @@
+<html>
+<head>   
+    <title> Gallery </title>
+    <link rel="stylesheet" href="mystyle.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container">
+        <div class ="navbar">
+            <p>Priam's Animal Foundation</p>
+            <ul>
+                <li><a href="Home.html"> Home </a></li>
+                <li><a href="About.html"> About </a></li>
+                <li><a href="services.html"> Services </a></li>
+                <li><a href="gallery.html"> Gallery </a></li>
+                <li><a href="Contact.html"> Contact </a></li>
+            </ul>
+        </div>
+        <div class="full-img" id="fullImgBox">
+            <img src ="gallery1.jpg" height ="300px" width = "290px" id="fullImg"> </a>
+            <span onclick="closeFullImg()">X</span>
+
+        </div>
+        <div class = "img-gallery">
+            <div class="column1">
+            <img src ="gallery1.jpg" height ="300px" width = "290px" onclick="openFullImg(this.src)"> </a>
+            <img src ="gallery7.jpeg" height ="300px" width = "290px" onclick="openFullImg(this.src)"> 
+            <img src ="gallery3.jpg" height ="300px" width = "290px" onclick="openFullImg(this.src)"> 
+            <img src ="gallery10.jpg" height ="300px" width = "290px" onclick="openFullImg(this.src)"> 
+        </div>
+        <div class="column2">
+            <img src ="gallery4.png" height ="300px" width = "290px" onclick="openFullImg(this.src)"> 
+            <img src ="gallery8.jpg" height ="300px" width = "290px" onclick="openFullImg(this.src)"> 
+            <img src ="gallery6.jpg" height ="300px" width = "290px" onclick="openFullImg(this.src)"> 
+            <img src ="gallery11.jpg" height ="300px" width = "290px" onclick="openFullImg(this.src)"> 
+            </div>
+            <div class="column2">
+                <img src ="gallery5.png" height ="300px" width = "290px" onclick="openFullImg(this.src)"> 
+                <img src ="gallery2.jpg" height ="300px" width = "290px" onclick="openFullImg(this.src)"> 
+                <img src ="gallery9.jpg" height ="300px" width = "290px" onclick="openFullImg(this.src)"> 
+                <img src ="gallery12.jpg" height ="300px" width = "290px" onclick="openFullImg(this.src)"> 
+            </div>
+        </div>
+<script>
+
+var fullImgBox = document.getElementById("fullImgBox");
+var fullImg = document.getElementById("fullImg");
+
+function openFullImg(pic){
+    fullImgBox.style.display = "flex";
+    fullImg.src = pic;
+}
+
+function closeFullImg(){
+    fullImgBox.style.display = "none";
+}
+
+
+
+</script>
+
+
+
+    </body>
+    </html>

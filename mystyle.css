@@ -1,0 +1,366 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing:border-box;
+}
+body{
+    width:100%;
+    height:100vh;
+    background-color: rgb(202, 147, 80);
+   
+}
+.navbar {
+    width:85%;
+    margin:auto;
+    padding: 35px 0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.logo{
+    width:50px;
+    cursor:pointer;
+}
+
+.navbar ul li{
+    list-style:none;
+    display:inline-block;
+    margin:0 20px;
+    position:relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color:rgb(252, 252, 252);
+    text-transform:uppercase;
+}
+.navbar ul li::after{
+    content:'';
+    height:3px;
+    width:0;
+    background: black;
+    position: absolute;
+    left:0;
+    bottom:-10;
+    transition:0.5s;
+}
+.navbar ul li:hover::after{
+    width:100%;
+}
+
+
+.about_text span {
+    color:rgb(12, 130, 199);
+    font-weight:bold;
+}
+.img_about{
+    
+   height:50%;
+   border-radius: 30%;
+}
+.text-locate{
+    margin-top:10%;
+    font-size:20px;
+    
+}
+.text_home{
+   flex-basis:50%;
+ }
+ .text_home h1{
+     font-size:60px;
+     margin-top:20px;
+ }
+
+
+
+.navbar p{
+    font-weight:bold;
+    font-size:30px;
+    color:rgb(12, 130, 199);
+}
+
+.homeimage img{width:100%;}
+
+.row{
+    display:flex;
+    height:88%;
+    align-items:center;
+}
+.card{
+    width:200px;
+    height:230px;
+    display:inline-block;
+    border-radius:10px;
+    padding:15px 25px;
+    box-sizing:border-box;
+    cursor:pointer;
+    margin:10px 15px;
+    background-position:center;
+    background-size:cover;
+    transition: transform 0.5s;
+}
+.card1{
+    background-image:url(lowcost.jpg);
+}
+.card2{
+    background-image:url(adoption.webp);
+}
+.card3{
+    background-image:url(daycare.webp);
+}
+.card4{
+    background-image:url(rescue.png);
+}
+.card:hover{
+    transform:translateY(-10px);
+}
+h5{
+    color:black;
+    text-shadow:0 0 px #a11010;
+    font-weight:900;
+}
+.card p{
+    text-shadow:0 0 15px #000;
+    
+  
+}
+
+
+/* ---------------------------------PRIAM's ABOUT CSS----------------------------------------------- */
+#about{
+    padding:80px 0; 
+}
+.row{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.about-col-1{
+    flex-basis:35%;
+}
+.about-col-2{
+    flex-basis:60%;
+}
+.container_about{
+    grid-template-columns: auto auto ;
+gap:20px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.about_text h1{
+    font-size:60px;
+    margin-top:20px;
+    color:rgb(12, 130, 199);
+}
+
+.about_text{
+    font-size:25px;
+
+}
+.img_about{
+    border-radius:10%;
+    height:700px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*--------------------------------------PRIAM's CONTACT CSS-------------------- */
+.contact{
+    align-items:center;
+    justify-content: space-evenly;
+    text-align:center;
+}
+.img-contact{
+    border-radius:50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height:30%;
+}
+.socials ul li{
+    list-style:none;
+    display:inline;
+    margin:0 20px;
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.socials ul li a{
+   margin-top:20%;
+}
+
+h3{
+    text-align:center;
+    padding-top:5%;
+    margin-bottom:60px;
+    font-weight:600;
+    position: relative;
+}
+
+.socials img{
+    height:50px;
+    width:50px;
+    align-items: baseline;
+}
+.socials span{
+    text-align: justify;
+}
+
+.cont-form{
+    width:100%;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding:2vw 4vw;
+    width:90%;
+    max-width: 600px;
+    border-radius:10px;
+}
+form h3{
+    color: #555;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+form input, form textarea{
+    border:0;
+    margin:10px 0;
+    padding:20px;
+    outline:none;
+    background:#f5f5f5;
+    font-size:16px;
+}
+form button{
+    padding:15px;
+    background:#ff5361;
+    color:#fff;
+    font-size:18px;
+    border:0;
+    outline:none;
+    cursor:pointer;
+    width:150px;
+    margin:20px auto 0;
+    border-radius: 30px;
+}
+/*---------------------------------PRIAM'S GALLERY CSS ----------------------- */
+
+.img-gallery{
+    margin-top:10%;
+    display:grid;
+    grid-template-columns: auto auto auto;
+    gap:20px;
+}
+
+.img-gallery img{
+    cursor: pointer;
+}
+
+.img-gallery img:hover{
+    transform: scale(0.8) rotate(-15deg);
+    border-radius:20px;
+    box-shadow:0 32px 75px rgba(68, 77, 136, 0.2);
+}
+
+.full-img {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    position:fixed;
+    top:0;
+    left:0;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:100;
+}
+
+.full-img img{
+    width:90%;
+    max-width:500px;
+}
+
+.full-img span{
+    position:absolute;
+    top:5%;
+    right:5%;
+    font-size:30px;
+    color:#fff;
+    cursor:pointer;
+}
+
+/*---------------------------------PRIAM'S SERVICES CSS ----------------------- */
+
+.container1{
+    width:100%;
+    height:100vh;
+    padding:0 8%;
+}
+
+.container1 h1{
+    text-align:center;
+    padding-top:10%;
+    margin-bottom:60px;
+    font-weight:600;
+    position: relative;
+}
+.container1 h1::after{
+    content:'';
+    background: #303ef7;
+    width:100px;
+    height:5px;
+    position:absolute;
+    bottom:-5px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.container .row1{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap:30px;
+}
+
+.container .row1 .service{
+   padding: 25px 10px;
+   text-align:center;
+   border-radius:5px;
+   transition:transform .5s;
+   color:#555;
+   font-size:14px;
+   cursor:pointer;
+}
+.container .row1 .service:hover{
+transform:scale(1.1);
+background:#298;
+color:#fff;
+}
+
+.container .row1 .service i {
+    font-size:40px;
+    color:rgb(222, 238, 236);
+    margin-bottom:10px;
+}
+.container .row .service:hover i{
+    color:#fff;
+}
+
+.container .row1 .service h2{
+    margin-bottom:8px;
+}
+
+.service a{
+    text-decoration: none;
+    color:rgb(252, 252, 252);
+    text-transform:uppercase;
+}
